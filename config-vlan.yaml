@@ -1,0 +1,30 @@
+network:
+        version: 2
+        renderer: networkd
+        ethernets: 
+           wlp3s0:
+                dhcp4: true
+           enp0s25:
+                dhcp4: true
+                #addresses: [192.168.13.2/24]
+        vlans:
+            vlan.200:
+                id: 200
+                dhcp4: true
+                link: enp0s25
+                #addresses: [192.168.15.2/24]
+            vlan.300:
+                id: 300
+                dhcp4: true
+                link: enp0s25
+                addresses: [192.168.3.2/30]
+            vlan.400:
+                id: 400
+                dhcp4: true
+                link: enp0s25
+                #addresses: [192.168.4.2/30]
+            vlan.700:
+                id: 700
+                dhcp4: true
+                link: enp0s25
+                #addresses: [192.168.1.100/24]
